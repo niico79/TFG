@@ -1,0 +1,103 @@
+\UseRawInputEncoding
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{geometry}
+\newgeometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{tocloft}
+\usepackage{amsmath}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cfttoctitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftaftertoctitleskip}{2.0\baselineskip}
+\renewcommand{\cftchapfont}{\Large\bfseries}
+\renewcommand{\cftsecfont}{\large}
+\renewcommand{\cftsecpagefont}{\large} 
+\renewcommand{\cftsubsecfont}{\large}
+\renewcommand{\cftsubsecpagefont}{\large} 
+\usepackage{setspace}
+\setlength{\parindent}{0pt}
+\usepackage{multicol}
+\usepackage{bbold}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[square,sort,comma,numbers,sort&compress]{natbib}%IEEE
+%\usepackage[hidelinks]{hyperref}%referencias cruzadas
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15.71667pt}
+\newcommand{\myspecial}[1]{\mathrm{#1}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\arabic{section}.\ #1}}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[]{titlesec}
+\usepackage{titletoc}
+\usepackage{pifont}
+\usepackage[hidelinks,colorlinks=true,linkcolor = blue,citecolor=blue]{hyperref}
+\usepackage{tikz}
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+
+\let\it\texti
+
+
+\definecolor{uccolor}{RGB}{9,105,112}
+
+% Chapter style with numbering
+\titleformat{\chapter}[display]
+{\bfseries\huge}
+{}
+{0.5ex}
+{
+    \hspace*{-0.15cm}
+    \colorbox{uccolor}{\parbox[c][2cm][c]{2cm}{\centering\color{white}\fontsize{40}{50}\selectfont\thechapter}}
+    \hspace{0.5cm}
+    \color{uccolor!75}
+}
+[
+    \vspace{1ex}
+    {\color{uccolor!75}\rule{\textwidth}{3pt}}
+]
+
+
+% Chapter style without numbering
+\titleformat{name=\chapter,numberless}[display]
+{\bfseries\huge}
+{}
+{0.5ex}
+{
+    \hspace*{-0.15cm}
+    \colorbox{uccolor}{\parbox[c][2cm][c]{0.1cm}{\hspace*{0.5cm}}}
+    \hspace{0.5cm}
+    \color{uccolor!75}
+}
+[
+    \vspace{1ex}
+    {\color{uccolor!75}\rule{\textwidth}{3pt}}
+]
+
+
+
+
+% DEDICATORIA
+
+\makeatletter
+\def\dedicatoria#1{
+    \cleardoublepage
+    \thispagestyle{empty}
+    \vspace*{0.2\textheight}
+    \begin{flushright}
+    {\emph{#1}}
+    \end{flushright}
+    \clearpage
+}
+\makeatother
+
+%
